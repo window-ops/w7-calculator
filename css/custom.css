@@ -1,0 +1,44 @@
+body {
+  background-color: #fefefe;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-image: url("../images/background.jpg");
+}
+
+.floating {
+  border-radius: 2px;
+}
+
+.first-menuitem {
+  border-radius: 2px 0 0 0;
+}
+
+#windowActions {
+  display: none;
+}
+
+.window {
+  width: 351px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.margin-bottom-5 {
+  margin-bottom: 5px;
+}
+
+.margin-right-5 {
+  margin-right: 5px;
+}
+
+.margin-left-5 {
+  margin-left: 5px;
+}
+
+.width-100 {
+  width: 100%;
+}

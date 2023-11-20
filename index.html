@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/7.css">
+    <link rel="stylesheet" href="./css/custom.css">
+    <script src="./js/functions.js"></script>
+    <title>Calculator</title>
+  </head>
+  <body>
+    <ul role="menubar" class="can-hover floating">
+      <li role="menuitem" class="first-menuitem" tabindex="0" aria-haspopup="true"> File 
+        <ul role="menu">
+          <li role="menuitem">
+            <a onclick="history.back();"> Go Back <span>Alt+Left Arrow</span></a>
+          </li>
+          <li role="menuitem">
+            <a onclick="history.forward();"> Go Forward <span>Alt+Right Arrow</span></a>
+          </li>
+          <li role="menuitem" class="has-divider">
+            <a onclick="location.reload();"> Reload <span>Ctrl+R</span></a>
+          </li>
+          <li role="menuitem">
+            <a onclick="window.close();">Exit <span>Ctrl+W</span></a>
+          </li>
+        </ul>
+      </li>
+      <li role="menuitem" tabindex="0" aria-haspopup="true" id="windowActions"> Calculator 
+        <ul role="menu">
+          <li role="menuitem">
+            <a onclick="restoreWindow()"> Restore Window </a>
+            <a onclick="closeWindow()"> Close Window </a>
+          </li>
+        </ul>
+      </li>    
+    </ul>
+    <div class="d-flex flex-column align-items-center window active" id="window">
+      <div class="title-bar" id="title-bar">
+        <div class="title-bar-text">Calculator</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimize" onclick="minimizeWindow()"></button>
+          <button aria-label="Maximize" disabled></button>
+          <button aria-label="Close" onclick="closeWindow()"></button>
+        </div>
+      </div>
+      <div class="window-body has-space">
+        <input type="text" id="display" class="width-100 margin-bottom-5" disabled>
+        <div class="d-flex flex-row margin-bottom-5 width-100">
+          <button onclick="appendToDisplay('7')" class="margin-right-5" id="button-7">7</button>
+          <button onclick="appendToDisplay('8')" class="margin-right-5" id="button-8">8</button>
+          <button onclick="appendToDisplay('9')" class="margin-right-5" id="button-9">9</button>
+          <button onclick="appendToDisplay('/')" style="" id="button-divide">/</button>
+        </div>
+        <div class="d-flex flex-row margin-bottom-5 width-100">
+          <button onclick="appendToDisplay('4')" class="margin-right-5" id="button-4">4</button>
+          <button onclick="appendToDisplay('5')" class="margin-right-5" id="button-5">5</button>
+          <button onclick="appendToDisplay('6')" class="margin-right-5" id="button-6">6</button>
+          <button onclick="appendToDisplay('*')" id="button-multiply">*</button>
+        </div>
+        <div class="d-flex flex-row margin-bottom-5 width-100">
+          <button onclick="appendToDisplay('1')" class="margin-right-5" id="button-1">1</button>
+          <button onclick="appendToDisplay('2')" class="margin-right-5" id="button-2">2</button>
+          <button onclick="appendToDisplay('3')" class="margin-right-5" id="button-3">3</button>
+          <button onclick="appendToDisplay('-')" id="button-subtract">-</button>
+        </div>
+        <div class="d-flex flex-row margin-bottom-5 width-100">
+          <button onclick="appendToDisplay('0')" class="margin-right-5" id="button-0">0</button>
+          <button onclick="appendToDisplay('.')" id="button-decimal">.</button>
+          <button onclick="clearDisplay()" class="margin-left-5 margin-right-5" id="button-clear">C</button>
+          <button onclick="appendToDisplay('+')" id="button-add">+</button>
+        </div>
+        <div class="d-flex flex-row width-100">
+          <button onclick="calculate()" class="width-100" id="button-equals">=</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
