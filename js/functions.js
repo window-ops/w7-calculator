@@ -41,6 +41,7 @@ function disableButtons() {
   document.getElementById('button-multiply').disabled = true;
   document.getElementById('button-divide').disabled = true;
   document.getElementById('button-decimal').disabled = true;
+  document.getElementById('button-equals').disabled = true;
 }
 
 function enableButtons() {
@@ -59,7 +60,10 @@ function enableButtons() {
   document.getElementById('button-multiply').disabled = false;
   document.getElementById('button-divide').disabled = false;
   document.getElementById('button-decimal').disabled = false;
+  document.getElementById('button-equals').disabled = false;
 }
+
+// Window Buttons
 
 function minimizeWindow() {
   document.getElementById('window').style.display = "none";
@@ -104,7 +108,6 @@ function dragStart(e) {
 
   if (e.target === document.getElementById('title-bar')) {
     isDragging = true;
-    // Store the initial position of the window
     initialWindowX = parseFloat(getComputedStyle(document.getElementById('window')).transform.split(',')[4]);
     initialWindowY = parseFloat(getComputedStyle(document.getElementById('window')).transform.split(',')[5]);
   }
@@ -122,7 +125,6 @@ function drag(e) {
       yOffset = e.clientY - initialY;
     }
 
-    // Calculate the new position of the window relative to the initial position
     let newX = initialWindowX + xOffset;
     let newY = initialWindowY + yOffset;
 
