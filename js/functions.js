@@ -92,6 +92,9 @@ function restoreCalculatorWindow() {
 
 function setTranslate(xPos, yPos, el) {
   el.style.transform = `translate3d(${xPos}px, ${yPos}px, 0)`;
+}
+
+function bringWindowToFront(windowElement) {
   let windows = document.querySelectorAll('.window');
   let maxZIndex = 0;
   windows.forEach(window => {
@@ -100,7 +103,7 @@ function setTranslate(xPos, yPos, el) {
       maxZIndex = zIndex;
     }
   });
-  el.style.zIndex = maxZIndex + 1;
+  windowElement.style.zIndex = maxZIndex + 1;
 }
 
 function enableGrab(windowElement) {
@@ -153,10 +156,16 @@ function enableGrab(windowElement) {
     isDragging = false;
   }
 
-  windowElement.querySelector('.title-bar').addEventListener('mousedown', dragStart);
+  windowElement.querySelector('.title-bar').addEventListener('mousedown', function(e) {
+    dragStart(e);
+    bringWindowToFront(windowElement);
+  });
   windowElement.querySelector('.title-bar').addEventListener('mouseup', dragEnd);
   windowElement.querySelector('.title-bar').addEventListener('mousemove', drag);
-  windowElement.querySelector('.title-bar').addEventListener('touchstart', dragStart);
+  windowElement.querySelector('.title-bar').addEventListener('touchstart', function(e) {
+    dragStart(e);
+    bringWindowToFront(windowElement);
+  });
   windowElement.querySelector('.title-bar').addEventListener('touchend', dragEnd);
   windowElement.querySelector('.title-bar').addEventListener('touchmove', drag);
 }
