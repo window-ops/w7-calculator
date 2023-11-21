@@ -63,21 +63,21 @@ function enableButtons() {
   document.getElementById('button-equals').disabled = false;
 }
 
-// Window Buttons
+// Calculator Window Buttons
 
-function minimizeWindow() {
-  document.getElementById('window').style.display = "none";
-  document.getElementById('windowActions').style.display = "block";
+function minimizeCalculatorWindow() {
+  document.getElementById('calculatorWindow').style.display = "none";
+  document.getElementById('calculatorWindowActions').style.display = "block";
 }
 
-function closeWindow() {
-  document.getElementById('window').remove();
-  document.getElementById('windowActions').remove();
+function closeCalculatorWindow() {
+  document.getElementById('calculatorWindow').remove();
+  document.getElementById('calculatorWindowActions').remove();
 }
 
-function restoreWindow() {
-  document.getElementById('window').style.display = "block";
-  document.getElementById('windowActions').style.display = "none";
+function restoreCalculatorWindow() {
+  document.getElementById('calculatorWindow').style.display = "block";
+  document.getElementById('calculatorWindowActions').style.display = "none";
 }
 
 // Drag Window
@@ -108,8 +108,8 @@ function dragStart(e) {
 
   if (e.target === document.getElementById('title-bar')) {
     isDragging = true;
-    initialWindowX = parseFloat(getComputedStyle(document.getElementById('window')).transform.split(',')[4]);
-    initialWindowY = parseFloat(getComputedStyle(document.getElementById('window')).transform.split(',')[5]);
+    initialWindowX = parseFloat(getComputedStyle(document.getElementById('calculatorWindow')).transform.split(',')[4]);
+    initialWindowY = parseFloat(getComputedStyle(document.getElementById('calculatorWindow')).transform.split(',')[5]);
   }
 }
 
@@ -128,7 +128,7 @@ function drag(e) {
     let newX = initialWindowX + xOffset;
     let newY = initialWindowY + yOffset;
 
-    setTranslate(newX, newY, document.getElementById('window'));
+    setTranslate(newX, newY, document.getElementById('calculatorWindow'));
   }
 }
 

@@ -26,22 +26,23 @@
           </li>
         </ul>
       </li>
-      <li role="menuitem" tabindex="0" aria-haspopup="true" id="windowActions"> Calculator 
+      <li role="menuitem" tabindex="0"> About </li>
+      <li role="menuitem" tabindex="0" aria-haspopup="true" id="calculatorWindowActions"> Calculator 
         <ul role="menu">
           <li role="menuitem">
-            <a onclick="restoreWindow()"> Restore Window </a>
-            <a onclick="closeWindow()"> Close Window </a>
+            <a onclick="restoreCalculatorWindow()"> Restore Window </a>
+            <a onclick="closeCalculatorWindow()"> Close Window </a>
           </li>
         </ul>
       </li>    
     </ul>
-    <div class="d-flex flex-column align-items-center window active" id="window">
+    <div class="d-flex flex-column align-items-center window active" id="calculatorWindow">
       <div class="title-bar" id="title-bar">
         <div class="title-bar-text">Calculator</div>
         <div class="title-bar-controls">
-          <button aria-label="Minimize" onclick="minimizeWindow()"></button>
+          <button aria-label="Minimize" onclick="minimizeCalculatorWindow()"></button>
           <button aria-label="Maximize" disabled></button>
-          <button aria-label="Close" onclick="closeWindow()"></button>
+          <button aria-label="Close" onclick="closeCalculatorWindow()"></button>
         </div>
       </div>
       <div class="window-body has-space">
