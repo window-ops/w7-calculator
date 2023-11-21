@@ -80,7 +80,7 @@ function restoreCalculatorWindow() {
   document.getElementById('calculatorWindowActions').style.display = "none";
 }
 
-// Drag Window
+// Drag Calculator Window
 
 let isDragging = false;
 let initialX;
@@ -106,7 +106,7 @@ function dragStart(e) {
     initialY = e.clientY - yOffset;
   }
 
-  if (e.target === document.getElementById('title-bar')) {
+  if (e.target === document.getElementById('calculatorWindowTitleBar')) {
     isDragging = true;
     initialWindowX = parseFloat(getComputedStyle(document.getElementById('calculatorWindow')).transform.split(',')[4]);
     initialWindowY = parseFloat(getComputedStyle(document.getElementById('calculatorWindow')).transform.split(',')[5]);
