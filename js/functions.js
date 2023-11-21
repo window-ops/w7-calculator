@@ -151,3 +151,7 @@ function setTranslate(xPos, yPos, el) {
 }
 
 // About Window
+
+function openAboutWindow() {
+  
+}
