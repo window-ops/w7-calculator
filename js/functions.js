@@ -92,6 +92,15 @@ function restoreCalculatorWindow() {
 
 function setTranslate(xPos, yPos, el) {
   el.style.transform = `translate3d(${xPos}px, ${yPos}px, 0)`;
+  let windows = document.querySelectorAll('.window');
+  let maxZIndex = 0;
+  windows.forEach(window => {
+    let zIndex = parseInt(window.style.zIndex) || 0;
+    if (zIndex > maxZIndex) {
+      maxZIndex = zIndex;
+    }
+  });
+  el.style.zIndex = maxZIndex + 1;
 }
 
 function enableGrab(windowElement) {
