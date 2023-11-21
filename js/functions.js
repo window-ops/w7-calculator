@@ -1,3 +1,7 @@
+// Calculator Window
+
+// Display
+
 let hasResult = false;
 
 function appendToDisplay(value) {
@@ -13,6 +17,8 @@ function clearDisplay() {
   hasResult = false;
 }
 
+// Calculations
+
 function calculate() {
   try {
     document.getElementById('display').value = eval(document.getElementById('display').value);
@@ -24,6 +30,8 @@ function calculate() {
     hasResult = true;
   }
 }
+
+// Disable/Enable Calculator Buttons
 
 function disableButtons() {
   document.getElementById('button-0').disabled = true;
@@ -141,3 +149,5 @@ function dragEnd() {
 function setTranslate(xPos, yPos, el) {
   el.style.transform = `translate3d(${xPos}px, ${yPos}px, 0)`;
 }
+
+// About Window
