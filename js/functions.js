@@ -188,6 +188,6 @@ function openAboutWindow() {
 }
 
 function closeAboutWindow() {
-  document.getElementById('aboutWindow').style.display = "none";
+  document.getElementById('aboutWindow').remove();
   document.getElementById('aboutWindowActions').style.display = "block";
 }
