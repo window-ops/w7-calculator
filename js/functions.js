@@ -153,5 +153,14 @@ function setTranslate(xPos, yPos, el) {
 // About Window
 
 function openAboutWindow() {
-  
+  let aboutWindowHTML = '<div class="d-flex flex-column align-items-center window active" id="aboutWindow">' +
+                        '<div class="title-bar" id="aboutWindowTitleBar">' +
+                        '<div class="title-bar-text">About</div>' +
+                        '<div class="title-bar-controls">' +
+                        '<button aria-label="Close" onclick="closeAboutWindow()"></button>' +
+                        '</div>' +
+                        '</div>' +
+                        '<div class="window-body has-space"></div>' +
+                        '</div>'
+  document.body.appendChild(aboutWindowHTML);
 }
