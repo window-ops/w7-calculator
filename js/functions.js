@@ -97,12 +97,12 @@ let xOffset = 0;
 let yOffset = 0;
 
 document.addEventListener('DOMContentLoaded', function() {
-  document.getElementById('title-bar').addEventListener('mousedown', dragStart);
-  document.getElementById('title-bar').addEventListener('mouseup', dragEnd);
-  document.getElementById('title-bar').addEventListener('mousemove', drag);
-  document.getElementById('title-bar').addEventListener('touchstart', dragStart);
-  document.getElementById('title-bar').addEventListener('touchend', dragEnd);
-  document.getElementById('title-bar').addEventListener('touchmove', drag);
+  document.getElementById('calculatorWindowTitleBar').addEventListener('mousedown', dragStart);
+  document.getElementById('calculatorWindowTitleBar').addEventListener('mouseup', dragEnd);
+  document.getElementById('calculatorWindowTitleBar').addEventListener('mousemove', drag);
+  document.getElementById('calculatorWindowTitleBar').addEventListener('touchstart', dragStart);
+  document.getElementById('calculatorWindowTitleBar').addEventListener('touchend', dragEnd);
+  document.getElementById('calculatorWindowTitleBar').addEventListener('touchmove', drag);
 });
 
 function dragStart(e) {
