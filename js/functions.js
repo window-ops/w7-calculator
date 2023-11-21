@@ -184,4 +184,10 @@ function openAboutWindow() {
     '<div class=\"window-body has-space\">UNDER CONSTRUCTION</div>';
   document.body.appendChild(aboutWindow);
   enableGrab(aboutWindow);
+  document.getElementById('aboutWindowActions').style.display = "none";
+}
+
+function closeAboutWindow() {
+  document.getElementById('aboutWindow').style.display = "none";
+  document.getElementById('aboutWindowActions').style.display = "block";
 }

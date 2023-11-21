@@ -26,7 +26,6 @@
           </li>
         </ul>
       </li>
-      <li role="menuitem" tabindex="0" onclick="openAboutWindow()"> About </li>
       <li role="menuitem" tabindex="0" aria-haspopup="true" id="calculatorWindowActions"> Calculator 
         <ul role="menu">
           <li role="menuitem">
@@ -34,7 +33,8 @@
             <a onclick="closeCalculatorWindow()"> Close Window </a>
           </li>
         </ul>
-      </li>    
+      </li>
+      <li role="menuitem" tabindex="0" onclick="openAboutWindow()" id="aboutWindowActions"> About </li>
     </ul>
     <div class="d-flex flex-column align-items-center window active" id="calculatorWindow">
       <div class="title-bar" id="calculatorWindowTitleBar">
@@ -51,7 +51,7 @@
           <button onclick="appendToDisplay('7')" class="margin-right-5" id="button-7">7</button>
           <button onclick="appendToDisplay('8')" class="margin-right-5" id="button-8">8</button>
           <button onclick="appendToDisplay('9')" class="margin-right-5" id="button-9">9</button>
-          <button onclick="appendToDisplay('/')" style="" id="button-divide">/</button>
+          <button onclick="appendToDisplay('/')" id="button-divide">/</button>
         </div>
         <div class="d-flex flex-row margin-bottom-5 width-100">
           <button onclick="appendToDisplay('4')" class="margin-right-5" id="button-4">4</button>
