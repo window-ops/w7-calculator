@@ -162,17 +162,17 @@ document.addEventListener('DOMContentLoaded', function() {
 // About Window
 
 function openAboutWindow() {
-  let aboutWindowHTML = '<div class="d-flex flex-column align-items-center window active" id="aboutWindow">' +
-                        '<div class="title-bar" id="aboutWindowTitleBar">' +
-                        '<div class="title-bar-text">About</div>' +
-                        '<div class="title-bar-controls">' +
-                        '<button aria-label="Close" onclick="closeAboutWindow()"></button>' +
-                        '</div>' +
-                        '</div>' +
-                        '<div class="window-body has-space"></div>' +
-                        '</div>';
   let aboutWindow = document.createElement('div');
-  aboutWindow.innerHTML = aboutWindowHTML;
+  aboutWindow.classList.add('d-flex', 'flex-column', 'align-items-center', 'window', 'active');
+  aboutWindow.id = 'aboutWindow';
+  aboutWindow.innerHTML =
+    '<div class=\"title-bar\" id=\"aboutWindowTitleBar\">' +
+    '<div class=\"title-bar-text\">About</div>' +
+    '<div class=\"title-bar-controls\">' +
+    '<button aria-label=\"Close\" onclick=\"closeAboutWindow()\"></button>' +
+    '</div>' +
+    '</div>' +
+    '<div class=\"window-body has-space\">UNDER CONSTRUCTION</div>';
   document.body.appendChild(aboutWindow);
   enableGrab(aboutWindow);
 }

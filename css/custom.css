@@ -27,6 +27,14 @@ body {
   transform: translate(-50%, -50%);
 }
 
+#aboutWindow {
+  width: 320px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .margin-bottom-5 {
   margin-bottom: 5px;
 }
