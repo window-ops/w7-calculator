@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function openAboutWindow() {
   let aboutWindow = document.createElement('div');
-  aboutWindow.classList.add('d-flex', 'flex-column', 'align-items-center', 'window', 'active');
+  aboutWindow.classList.add('window', 'active');
   aboutWindow.id = 'aboutWindow';
   aboutWindow.innerHTML =
     '<div class=\"title-bar\" id=\"aboutWindowTitleBar\">' +
